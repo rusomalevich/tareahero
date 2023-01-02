@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
 :root {
     --black:#161513;
@@ -51,6 +52,8 @@ a {
     display: flex;
     justify-content: space-between;
 }
+
+.bi-list {display: none;}
 
 .navPpal .navLink {
     font-weight: 600;
@@ -226,6 +229,10 @@ header .ctoTalk:hover{
 @media (max-width: 768px) {
 
     .navPpal, header .ctoTalk {display: none;}
+    .bi-list {
+        display: inline-block;
+        font-size: 1.8em;
+    }
 
     .barOblique>ul>li::before {
         content: "";
