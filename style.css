@@ -227,7 +227,6 @@ header .ctoTalk:hover{
 }
 
 @media (max-width: 768px) {
-
     .navPpal, header .ctoTalk {display: none;}
     .bi-list {
         display: inline-block;
