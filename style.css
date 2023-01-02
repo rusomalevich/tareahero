@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
 :root {
-    --colorPrimario: #393940;
-    --colorHighlight: #5c54f2;
-    --backWeb:#f5f9fc;
+    --black:#161513;
+    --colorPrimario: #383635;
+    --colorHighlight: #e94d35;
+    --backWeb:#f3f1ef;
     --blanco:#fff;
+    --font: 'Bai Jamjuree', sans-serif;
+    --lightGrey:#71716f;
 }
 
 body {
@@ -10,9 +15,261 @@ body {
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--backWeb);
+    font-family: var(--font);
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
+    color: var(--colorPrimario);
 }
 
+::selection {
+    background-color: var(--colorHighlight);
+    color:var(--backWeb);
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 1366px;
+}
+
+.topHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+}
+
+.navPpal {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navPpal .navLink {
+    font-weight: 600;
+}
+.navLink:hover{
+    color:var(--colorHighlight);
+}
+
+.cto {
+    display: inline-block;
+    padding: 12px 20px;
+    font-weight: 700;
+    background-color: var(--black);
+    color:var(--blanco);
+    border: solid transparent 2px;
+
+}
+
+.cto:hover{
+    text-decoration: underline;
+}
+
+.ctoTalk {
+    color:var(--black);
+    border: solid var(--lightGrey) 2px;
+    background-color: transparent;
+    transition: background-color .3s
+}
+
+header .ctoTalk:hover{
+    background-color: var(--black);
+    text-decoration: underline;
+    color:var(--blanco);
+}
+
+.hero{
+    width: 100%;
+    display: flex;
+    height: 600px;
+    gap: 45px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.heroLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+    padding-left: 2.5em;
+    width: 60%;
+
+}
+
+.heroRight {
+    width: 33%;
+}
+
+.heroRight > img{
+    width: 100%;
+}
+
+.hero h1 {
+    text-transform: uppercase;
+    font-size: 4em;
+    margin: 0;
+    color:var(--black);
+}
+
+.hero h1 .through {
+    text-decoration: line-through;
+}
+
+.iconSun {
+    display: inline-block;
+    background-image: url(img/sol.svg);
+    background-size: 100%;
+}
+
+.hero h1 .iconSun {
+    width: .8em;
+    height: .8em;
+}
+
+
+.heroList {
+    list-style: none;
+    padding: 0;
+    margin:0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.heroList .heroListItem {
+    text-transform: uppercase;
+    font-size: 1.72em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.iconAsterisk{
+    display: inline-block;
+    background-image: url(img/asterisco.svg);
+}
+
+.heroList .iconAsterisk {
+    width: 20px;
+    height: 20px;
+    margin: 0 .5em;
+}
+
+.barOblique {
+    transform: rotate(-1deg);
+    background-color: var(--black);
+    color: #fff;
+    width: 115vw;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: -19vw;
+    display: flex;
+    padding-left: 12vw;
+}
+
+.barOblique > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 5vw;
+}
+
+.barOblique > ul > li {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+.barOblique>ul>li:nth-child(-n+5)::after {
+    content: "";
+    display: inline-block;
+    background: url(img/asterisco.svg) no-repeat center center;
+    width: 2.7vw;
+    height: 13px;
+    padding: 0 1em;
+}
+
+
+
+@media (max-width: 1450px) {
+    .hero {
+        font-size: 1.2vw;
+    }
+    
+    .barOblique {
+        height: 7vw;
+        bottom: -3vw;
+    }
+
+    .heroRight {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        flex-wrap: nowrap;
+    }
+
+    .heroLeft {
+        width: 50%;
+    }
+
+    .heroRight {
+        width: 43%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 7em;
+    }
+
+    .heroList .heroListItem {
+        font-size: 3.5em;
+    }
+
+    .heroLeft {
+        width: 100%;
+    }
+
+    .heroRight {
+        width: 100%;
+    }
+
+    .ctoContainer .cto {
+        font-size: 4em;
+    }
+
+    .barOblique {
+        height: auto;
+        position: static;
+        width: 102%;
+        padding-left:0;
+    }
+    
+    .barOblique>ul {
+            flex-wrap: wrap;
+    }
+
+    .barOblique > ul > li{
+        font-size: 3.4em;
+        line-height: 10vw;
+    }
+}
