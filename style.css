@@ -247,11 +247,12 @@ header .ctoTalk:hover{
     }
 
     .heroLeft {
-        width: 80%;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .heroRight {
-        width: 80%;
+        width: 100%;
     }
 
     .ctoContainer .cto {
