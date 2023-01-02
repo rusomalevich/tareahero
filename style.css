@@ -244,6 +244,7 @@ header .ctoTalk:hover{
 
     .hero {
         flex-direction: column;
+        gap: 0;
     }
 
     .hero h1 {
@@ -261,6 +262,7 @@ header .ctoTalk:hover{
 
     .heroRight {
         width: 100%;
+        margin-top: 20px;
     }
 
     .ctoContainer .cto {
