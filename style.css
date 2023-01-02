@@ -190,17 +190,6 @@ header .ctoTalk:hover{
     font-size: 1.4em;
 }
 
-.barOblique>ul>li:nth-child(-n+5)::after {
-    content: "";
-    display: inline-block;
-    background: url(img/asterisco.svg) no-repeat center center;
-    width: 2.7vw;
-    height: 13px;
-    padding: 0 1em;
-}
-
-
-
 @media (max-width: 1450px) {
     .hero {
         font-size: 1.2vw;
@@ -233,6 +222,18 @@ header .ctoTalk:hover{
 }
 
 @media (max-width: 768px) {
+
+    .navPpal, header .ctoTalk {display: none;}
+
+    .barOblique>ul>li::before {
+        content: "";
+        display: inline-block;
+        background: url(img/asterisco.svg) no-repeat center center;
+        width: 2.7vw;
+        height: 13px;
+        padding: 0 1em;
+    }
+
     .hero {
         flex-direction: column;
     }
@@ -261,7 +262,9 @@ header .ctoTalk:hover{
         height: auto;
         position: static;
         width: 102%;
-        padding-left:0;
+        padding: 20px;
+        transform: rotate(0deg);
+        width: 65%;
     }
     
     .barOblique>ul {
@@ -272,4 +275,17 @@ header .ctoTalk:hover{
         font-size: 3.4em;
         line-height: 10vw;
     }
+
+}
+
+@media (min-width:769px){
+    .barOblique>ul>li:nth-child(-n+5)::after {
+        content: "";
+        display: inline-block;
+        background: url(img/asterisco.svg) no-repeat center center;
+        width: 2.7vw;
+        height: 13px;
+        padding: 0 1em;
+    }
+
 }
