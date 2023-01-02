@@ -1,0 +1,18 @@
+:root {
+    --colorPrimario: #393940;
+    --colorHighlight: #5c54f2;
+    --backWeb:#f5f9fc;
+    --blanco:#fff;
+}
+
+body {
+    margin:0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--backWeb);
+}
+
+a {
+    text-decoration: none;
+}
+
