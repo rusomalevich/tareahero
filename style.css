@@ -167,7 +167,7 @@ header .ctoTalk:hover{
 }
 
 .barOblique {
-    transform: rotate(-1deg);
+    transform: rotate(-3deg);
     background-color: var(--black);
     color: #fff;
     width: 115vw;
